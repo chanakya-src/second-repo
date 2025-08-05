@@ -28,3 +28,11 @@ kops create cluster \
 
 
 kops update cluster --name chanti2.k8s.local --yes --admin
+
+
+
+sudo umount /tmp
+sudo mount -t tmpfs -o size=2G tmpfs /tmp
+tmpfs /tmp tmpfs defaults,size=2G 0 0
+sudo systemctl restart jenkins
+
